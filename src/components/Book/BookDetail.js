@@ -18,7 +18,7 @@ const BookDetail = () => {
   useEffect(() => {
     const fetchHandler = async () => {
       await axios
-        .get(`https://book-self-bb23.onrender.com/books/${id}`)
+        .get(`https://vidhi-book-shelf-bv.onrender.com/books/${id}`)
         .then((res) => res.data)
         .then((data) => setInputs(data.book));
     };
@@ -26,7 +26,7 @@ const BookDetail = () => {
   }, [id]);
   const sendRequest = async () => {
     await axios
-      .put(`https://book-self-bb23.onrender.com/books/${id}`, {
+      .put(`https://vidhi-book-shelf-bv.onrender.com/books/${id}`, {
         name: String(inputs.name),
         author: String(inputs.author),
         description: String(inputs.description),
